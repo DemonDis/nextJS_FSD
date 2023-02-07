@@ -2,14 +2,20 @@
 
 ## Getting Started
 
+Install node_modules:
+
+```bash
+yarn install
+# or
+npm install
+```
+
 First, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
 ## Login FSD
@@ -21,9 +27,15 @@ pnpm dev
     ├── pages/                  # Router next js
     |    ├── login/             # Импортируем page login
     |    |      └── index.ts    # login/
-    |    └──  lib/              # 
+    |    └──  monitor/          # Импортируем page monitor
     ├── pagesLayer/             # Pages (специфика next js)
     |     ├── login/            # Сборка страницы login
-    |     └── index.ts          # 
+    |     └── monitor/          # Сборка страницы monitor
+    ├── shared/                 # Переиспользуемые компоненты
+    |     ├── components/           # Компоненты
+    |     |     ├── button/         # Кнопка
+    |     |     ├── input/          # Для ввода
+    |     |     └── input-select/   # Выпадашка
+    |     └── icons/            # Иконки
     └── ...    
 ```
