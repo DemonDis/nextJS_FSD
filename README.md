@@ -22,7 +22,7 @@ pnpm dev
     |    ├── login/             # Импортируем page login
     |    |      └── index.ts    # login/
     |    └──  lib/              # 
-    ├── pagesLayer/             # 
+    ├── pagesLayer/             # Pages (специфика next js)
     |     ├── login/            # Сборка страницы login
     |     └── index.ts          # 
     └── ...    
