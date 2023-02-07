@@ -34,6 +34,8 @@ yarn dev
     ├── shared/                 # Переиспользуемые компоненты
     |     ├── components/           # Компоненты
     |     |     ├── button/         # Кнопка
+    |     |     |   ├── index.jsx
+    |     |     |   └── styles.module.scss
     |     |     ├── input/          # Для ввода
     |     |     └── input-select/   # Выпадашка
     |     └── icons/            # Иконки
