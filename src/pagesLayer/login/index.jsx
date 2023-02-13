@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { useStore } from "effector-react";
-import {  $todos } from "./state";
+import { $todos } from "./state";
 import { fetchUserFx } from "./controller";
 import "./model";
 
