@@ -1,16 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { useStore } from "effector-react";
+import {  $todos } from "./state";
+import { fetchUserFx } from "./controller";
+import "./model";
 
 const LoginPanel = () => {
+  const todos = useStore($todos);
+  useEffect(() => {
+    fetchUserFx();
+  }, []);
     return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-50">
-        <body class="h-full">
-        ```
-      */}
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
@@ -25,14 +25,17 @@ const LoginPanel = () => {
                 <label htmlFor="name" className="sr-only">
                   Name
                 </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="name"
-                  autoComplete="name"
-                  required
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                />
+                <select 
+                      className={'relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'}
+                      name={'name'}
+                      id={'id'}
+                  >
+                      {
+                          todos.map((item, index) => {
+                              return <option key={index} value={index}>{item.email}</option>
+                          })
+                      }
+                  </select>
               </div>
               <div>
                 <label htmlFor="password" className="sr-only">

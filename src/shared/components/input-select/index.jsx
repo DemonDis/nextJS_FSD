@@ -10,7 +10,7 @@ const InputSelect = ({name, id, data}) => {
         >
             {
                 data.map((item, index) => {
-                    return <option key={index} value={index}>{item}</option>
+                    return <option key={index} value={index}>{item.id}</option>
                 })
             }
         </select>
