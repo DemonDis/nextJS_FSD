@@ -1,9 +1,9 @@
-
+import { MonitorPanel } from '@/pagesLayer'
 
 const MonitorPage = () => {
     return (
         <div>
-            MonitorPage
+            <MonitorPanel/>
         </div>
     )
 };

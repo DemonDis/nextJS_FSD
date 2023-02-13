@@ -1,9 +1,9 @@
-
+import { LoginPanel } from '@/pagesLayer'
 
 const LoginPage = () => {
     return (
         <div>
-            LoginPage
+            <LoginPanel/>
         </div>
     )
 };
