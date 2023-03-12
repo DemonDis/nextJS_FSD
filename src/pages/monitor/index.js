@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const TeamsPage = () => {
   return <div>
-            <MonitorPanel />
+      ddd
   </div>;
 };
 
@@ -33,12 +33,7 @@ export const NestedLayout = ({ children }) => {
             <li>
               <Link href="/monitor/team1">Team1</Link>
             </li>
-            <li>
-              <Link href="/monitor/team2">Team2</Link>
-            </li>
-            <li>
-              <Link href="/monitor/team3">Team3</Link>
-            </li>
+            <MonitorPanel />
           </ol>
         </nav>
       </div>
