@@ -1,47 +1,18 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
 import { TeamsPageLayout } from "../index";
-import nestLayout from "../../../utils/nestLayout";
-import { useEffect } from "react";
 
+const nestLayout = (parent, child) => (page) => parent(child(page));
 const TeamPage = () => {
-  const router = useRouter();
-  const { team } = router.query;
-  return (
-    <section>
-      <h3>{team}</h3>
-    </section>
-  );
+  return 
 };
 
 const NestedLayout = ({ children }) => {
-  useEffect(() => {
-    console.log("TeamPageLayout mounted");
-    return () => console.log("TeamPageLayout unmounted");
-  }, []);
-
-  const router = useRouter();
-  const { team } = router.query;
+  // const { team } = router.query;
 
   return (
-    <div>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link href={`/monitor/${team}`}>About</Link>
-            </li>
-            <li>
-              <Link href={`/monitor/${team}/players`}>Players</Link>
-            </li>
-            <li>
-              <Link href={`/monitor/${team}/fixtures`}>Fixtures</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <>
+      TEAM
       <section>{children}</section>
-    </div>
+    </>
   );
 };
 

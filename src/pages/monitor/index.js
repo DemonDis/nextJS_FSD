@@ -1,45 +1,24 @@
+import { useRouter } from "next/router";
 import { MonitorPanel } from '@/pagesLayer'
-import Link from "next/link";
-import { useEffect } from "react";
-// const MonitorPage = ({ children }) => {
-//     return (
-//         <div>
-//             <MonitorPanel/>
-//             { children }
-//         </div>
-//     )
-// };
-
-// export default MonitorPage;
 
 const TeamsPage = () => {
-  return <div>
-      ddd
-  </div>;
+  return
 };
 
 export const NestedLayout = ({ children }) => {
-  useEffect(() => {
-    console.log("TeamsPageLayout mounted");
-    return () => console.log("TeamsPageLayout unmounted");
-  }, []);
+    const router = useRouter();
     return (
-      <>
-        <div >
-      <div >
-        <h2>Teams</h2>
-        <nav>
-          <ol>
-            <li>
-              <Link href="/monitor/team1">Team1</Link>
-            </li>
-            <MonitorPanel />
-          </ol>
-        </nav>
+      <div className="m-4">
+        <MonitorPanel />
+        <button
+          onClick={() => router.push(`/monitor/team`)}
+          type="submit"
+          className="group relative flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          Team
+        </button>
+        {children}
       </div>
-      {children}
-    </div>
-      </>
     )
   }
 
