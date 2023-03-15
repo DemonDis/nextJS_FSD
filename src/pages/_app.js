@@ -1,21 +1,7 @@
 import '@/app/index.scss';
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <div >
-      <section>
-        <Layout Component={Component} pageProps={pageProps} />
-      </section>
-    </div>
-  );
+export default function MyApp({ Component, pageProps }) {
+  
+  const getLayout = Component.getLayout || ((page) => page)
+  return getLayout(<Component {...pageProps} />)
 }
-
-const Layout = ({ Component, pageProps }) => {
-  if (Component.getLayout) {
-    return Component.getLayout(<Component {...pageProps} />);
-  } else {
-    return <Component {...pageProps} />;
-  }
-};
-
-export default MyApp;
