@@ -1,11 +1,7 @@
 import { useRouter } from "next/router";
 import { MonitorPanel } from '@/pagesLayer'
 
-const TeamsPage = () => {
-  return
-};
-
-export const NestedLayout = ({ children }) => {
+const Monitor = ({children}) => {
     const router = useRouter();
     return (
       <div className="m-4">
@@ -22,9 +18,4 @@ export const NestedLayout = ({ children }) => {
     )
   }
 
-
-  export const TeamsPageLayout = (page) => <NestedLayout>{page}</NestedLayout>;
-
-TeamsPage.getLayout = TeamsPageLayout;
-
-export default TeamsPage;
+  export default Monitor;
