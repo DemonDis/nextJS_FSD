@@ -2,16 +2,20 @@ import React, {useEffect} from "react";
 import { useRouter } from 'next/router';
 
 import { useStore } from "effector-react";
-import { $todos, fetchUserFx } from "./model";
+import { $todos, fetchUserFx } from "../model";
 
-import "./model/model";
+import "../model/model";
 
-const LoginPanel = () => {
+export const LoginPanel = () => {
   const router = useRouter();
-
   const todos = useStore($todos);
+
   useEffect(() => {
-    fetchUserFx();
+    const request = {
+      firstName: 'Fred',
+      lastName: 'Flintstone'
+    }
+    fetchUserFx({request_type: 'posts', request: request});
   }, []);
 
     return (
@@ -36,8 +40,8 @@ const LoginPanel = () => {
                       id={'id'}
                   >
                       {
-                          todos.map((item, index) => {
-                              return <option key={index} value={index}>{item.email}</option>
+                          [todos].map((item, index) => {
+                              return <option key={index} value={index}>{item.id}</option>
                           })
                       }
                   </select>
@@ -73,5 +77,3 @@ const LoginPanel = () => {
     </>
     )
 };
-
-export default LoginPanel;
