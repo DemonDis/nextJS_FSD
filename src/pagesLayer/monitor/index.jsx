@@ -22,7 +22,6 @@ const MonitorPanel = () => {
               <div class="grid grid-flow-col gap-2">
                 <div class="row-span-1 bg-sky-500 p-4 h-screen">
                   <Left/>
- 
                 </div>
                 <div class="col-span-1 bg-cyan-500 p-4">
                   <Right/>

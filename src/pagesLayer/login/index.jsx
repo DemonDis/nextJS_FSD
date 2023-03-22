@@ -2,10 +2,9 @@ import React, {useEffect} from "react";
 import { useRouter } from 'next/router';
 
 import { useStore } from "effector-react";
-import { $todos } from "./state";
-import { fetchUserFx } from "./controller";
+import { $todos, fetchUserFx } from "./model";
 
-import "./model";
+import "./model/model";
 
 const LoginPanel = () => {
   const router = useRouter();
