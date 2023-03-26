@@ -1,3 +1,3 @@
-export { fetchUserFx } from './controller'
+export { fetchFx, fetchPostsFx, fetchTodosFx} from './controller'
 export { model } from './model.js' 
-export { $todos } from './state'
+export { $todos, $todos2 } from './state'
