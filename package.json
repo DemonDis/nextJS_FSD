@@ -6,6 +6,8 @@
     "start": "next dev",
     "start-mac": "npm run open-browser && next dev -p 3001",
     "open-browser": "open http://localhost:3001",
+    "start-linux": "xdg-open http://localhost:3001 && next dev -p 3001",
+    "start-windows": "explorers http://localhost:3001 && next dev -p 3001",
     "build": "next build && next export && next-nginx-routes"
   },
   "dependencies": {
@@ -15,9 +17,11 @@
     "effector-react": "^22.4.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
-    "next": "12.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.2.4",
+    "nextra": "^2.3.0",
+    "nextra-theme-docs": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.58.0"
   },
   "devDependencies": {
